@@ -24,6 +24,7 @@
     "body-parser": "^1.11.0",
     "cors": "^2.5.3",
     "express": "^4.11.1",
+    "newrelic": "^1.15.1",
     "node-fetch": "^1.0.3"
   }
 }
