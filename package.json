@@ -1,0 +1,25 @@
+{
+  "name": "pokemon-cards",
+  "version": "1.0.0",
+  "description": "Pokemon service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristenmills/pokemon-cards.git"
+  },
+  "author": "Kristen Mills",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kristenmills/pokemon-cards/issues"
+  },
+  "homepage": "https://github.com/kristenmills/pokemon-cards",
+  "private": true,
+  "dependencies": {
+    "express": "^4.11.1",
+    "node-fetch": "^1.0.3"
+  }
+}
