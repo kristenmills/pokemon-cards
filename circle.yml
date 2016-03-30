@@ -6,6 +6,7 @@ machine:
 
 dependencies:
   post:
+    - npm run lint
     - docker build -t tcgpokedex/pokedex .
 
 test:
