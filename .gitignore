@@ -1,5 +1,4 @@
 # Logs
-logs
 *.log
 
 # Runtime data
@@ -26,3 +25,6 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+config/database.json
+build

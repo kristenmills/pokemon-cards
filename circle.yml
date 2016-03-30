@@ -1,0 +1,21 @@
+machine:
+  services:
+    - docker
+  node:
+    version: 5.5.0
+
+dependencies:
+  post:
+    - docker build -t tcgpokedex/pokedex .
+
+test:
+  post:
+    - docker run -d -p 9200:9200 tcgpokedex/pokedex; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:9200
+
+deployment:
+  dockerhub:
+    branch: master
+    owner: tcgpokedex
+    commands:
+      - curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/tcgpokedex/pokedex/trigger/$BUILD_TOKEN/
