@@ -1,5 +1,8 @@
 import { Logger, transports } from 'winston';
+import mkdirp from 'mkdirp';
 import nconf from '../config';
+
+mkdirp.sync('./logs', 0o755);
 
 const logger = new Logger({
   transports: [
