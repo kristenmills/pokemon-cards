@@ -27,5 +27,5 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-config/database.json
+server/config/database.json
 build

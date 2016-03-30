@@ -19,4 +19,5 @@ deployment:
     branch: master
     owner: tcg-pokedex
     commands:
-      - "curl -H 'Content-Type: application/json' --data '{\"build\": true}' -X POST https://registry.hub.docker.com/u/tcgpokedex/pokedex/trigger/$BUILD_TOKEN/"
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push tcgpokedex/pokedex
