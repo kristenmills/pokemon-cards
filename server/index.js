@@ -6,6 +6,7 @@ import { install } from 'source-map-support';
 import nconf from './config';
 import logger from './utils/logger';
 import router from './routes';
+import './config/rethink';
 
 install();
 

@@ -1,5 +1,4 @@
 import nconf from 'nconf';
-import database from './database';
 
 nconf
   .argv()
@@ -7,7 +6,9 @@ nconf
   .use('memory');
 
 nconf.set('api:version', 'v1');
-nconf.set('db', database);
+nconf.set('db:db', 'pokedex');
+nconf.set('db:host', process.env.DB_HOST || 'localhost');
+nconf.set('db:port', process.env.DB_PORT || 28015);
 
 nconf.set('pagination:perPage', 20);
 nconf.set('limit:resource', 500);

@@ -8,10 +8,13 @@ dependencies:
   post:
     - npm run lint
     - docker build -t tcgpokedex/pokedex .
+    - sudo mkdir /data
 
 test:
   post:
-    - docker run -d -p 8000:8000 tcgpokedex/pokedex; sleep 10
+    - docker network create rethinknet
+    - docker run -d --net rethinknet --name rethinkdb -p 28015:28015 -v /data:/data rethinkdb:latest
+    - docker run -d  --net rethinknet -e DB_HOST=rethinkdb -p 8000:8000 tcgpokedex/pokedex; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:8000
 
 deployment:
