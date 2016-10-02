@@ -7,7 +7,7 @@ An API Pokemon The Trading Card Game
 
 1. Make sure you have Rethinkdb running.
 2. `npm install`
-3. `npm start-dev`
+3. `npm run start:dev`
 4. Navigate to localhost:3000
 
 ### Seeding the database

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node build/index.js",
-    "start-dev": "babel-node server/index.js",
+    "start:dev": "babel-node server/index.js",
     "build": "babel server --out-dir build --source-maps inline --copy-files",
     "test": "mocha",
     "lint": "eslint ."
@@ -30,8 +30,8 @@
     "mkdirp": "^0.5.1",
     "morgan": "^1.5.1",
     "nconf": "^0.8.4",
-    "node-fetch": "^1.0.3",
-    "rethinkdbdash": "^2.2.18",
+    "node-fetch": "^1.4.1",
+    "rethinkdbdash": "^2.3.23",
     "winston": "^2.2.0"
   },
   "devDependencies": {
